@@ -13,8 +13,8 @@
 
   <xacro:macro name="swerve_drive" params="name robot_type prefix parent geometry_parameters_file physical_parameters_file">
 
-    <xacro:property name="config_geometry_parameters" value="${load_yaml(geometry_parameters_file)}" />
-    <xacro:property name="config_physical_parameters" value="${load_yaml(physical_parameters_file)}" />
+    <xacro:property name="config_geometry_parameters" value="${xacro.load_yaml(geometry_parameters_file)}" />
+    <xacro:property name="config_physical_parameters" value="${xacro.load_yaml(physical_parameters_file)}" />
     
     <xacro:property name="geometry_config" value="${config_geometry_parameters['geometry_config']}" />
     <xacro:property name="joints_info" value="${config_physical_parameters['joints']}" />
